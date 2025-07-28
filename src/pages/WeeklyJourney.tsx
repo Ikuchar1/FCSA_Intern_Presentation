@@ -226,7 +226,7 @@ const WeeklyJourney = () => {
                     </div>
                   </div>
                   {/* Image placeholder */}
-                  <div className="w-32 h-24 bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm">
+                  <div className="w-48 h-36 bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm">
                     Week {week.week} Image
                   </div>
                 </div>
