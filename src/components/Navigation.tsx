@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Home, ImageIcon, Code, X } from "lucide-react";
+import { Menu, Home, ImageIcon, Code, X, Calendar } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +10,9 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", path: "/", icon: Home },
-    { name: "Gallery", path: "/gallery", icon: ImageIcon },
+    { name: "Weekly Journey", path: "/weekly-journey", icon: Calendar },
     { name: "Projects", path: "/projects", icon: Code },
+    { name: "Gallery", path: "/gallery", icon: ImageIcon },
   ];
 
   const isActive = (path: string) => location.pathname === path;
