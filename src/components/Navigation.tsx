@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Home, ImageIcon, Code, X, Calendar } from "lucide-react";
+import { Menu, Home, ImageIcon, Code, X, Calendar, Users } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: "Home", path: "/", icon: Home },
     { name: "Weekly Journey", path: "/weekly-journey", icon: Calendar },
     { name: "Projects", path: "/projects", icon: Code },
+    { name: "Connections", path: "/connections", icon: Users },
     { name: "Gallery", path: "/gallery", icon: ImageIcon },
   ];
 
