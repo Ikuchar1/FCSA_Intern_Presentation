@@ -90,7 +90,7 @@ const Connections = () => {
         </div>
 
         {/* Connections Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {connections.map((connection) => (
             <Card key={connection.id} className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="pb-4">
