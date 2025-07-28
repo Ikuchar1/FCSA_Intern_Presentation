@@ -26,39 +26,65 @@ const Connections = () => {
       ]
     },
     {
-      id: 2,
-      name: "Sarah Chen",
-      title: "Senior Software Engineer",
-      overview: "Sarah shared insights into the technical side of our platform and discussed best practices for code quality and collaboration. She also provided valuable perspective on career growth in engineering.",
+      id: 5,
+      name: "Keith Wilson",
+      title: "Regional Vice President – Insurance",
+      overview: "Keith gave an in-depth look into the complexities of crop and hail insurance. We talked for over two hours, and it became clear how layered the system is. I gained appreciation for the tools our Omaha teams built that he uses daily, and how closely our development work supports business operations.",
       keyTakeaways: [
-        "Code reviews are essential for maintaining quality and sharing knowledge across the team",
-        "Technical debt should be addressed incrementally alongside feature development",
-        "Pair programming is highly effective for complex problem-solving and knowledge transfer",
-        "Building strong relationships with product managers leads to better technical solutions"
+        "Crop insurance is more complex than it initially appears — hail coverage adds even more layers",
+        "Keith uses internal FCSA software developed in Omaha for insurance calculations",
+        "Gained perspective on how business users interact with our tools",
+        "Saw real feedback on how the tools could improve — which I shared with dev teams",
+        "Helped me \"walk in the shoes\" of the people I build for"
       ]
     },
     {
-      id: 3,
-      name: "Michael Rodriguez",
-      title: "UX Designer",
-      overview: "Michael explained the design thinking process and how user research drives product decisions. We discussed the collaboration between design and engineering teams.",
+      id: 6,
+      name: "Brett Esau & Shawn Meyer",
+      title: "Financial Officers",
+      overview: "Brett and Shawn exemplify the heart of small-town agriculture finance. Their genuine connection with customers shows how much impact a Financial Officer can have. Shawn also walked us through how business development works and how referrals drive growth.",
       keyTakeaways: [
-        "User research should happen early and often to validate design assumptions",
-        "Prototyping helps bridge the gap between design concepts and technical implementation",
-        "Cross-functional collaboration improves both user experience and technical feasibility",
-        "Design systems ensure consistency while allowing for creative solutions"
+        "Customer relationships are deeply personal — FOs often know families and local context",
+        "Both love farming and agriculture outside of work",
+        "Passion for the role energizes their customer interactions",
+        "Business development is largely relationship-based and built on trust"
       ]
     },
     {
-      id: 4,
-      name: "Amanda Foster",
-      title: "Product Owner",
-      overview: "Amanda provided insight into product strategy and how customer feedback shapes the roadmap. She emphasized the importance of data-driven decision making in product development.",
+      id: 7,
+      name: "Megan Ronne",
+      title: "Retail Closing Specialist",
+      overview: "Megan's role was a great reminder of how internal tools fuel business operations. She relies on multiple internally developed applications to do her job, and shared helpful feedback on how they could improve. Her story showed that learning and adapting is essential.",
       keyTakeaways: [
-        "Customer feedback is collected through multiple channels and analyzed for patterns",
-        "Feature prioritization balances customer needs, technical constraints, and business goals",
-        "Regular stakeholder communication prevents misalignment and scope creep",
-        "Product metrics help measure success and guide future development decisions"
+        "Uses 3+ FCSA-developed applications daily",
+        "Product reliability directly impacts her ability to close loans",
+        "Emphasized how improvements could better serve closing specialists",
+        "Reinforced how roles rely on each other and how tools need to work together",
+        "Showed the value of learning as you go"
+      ]
+    },
+    {
+      id: 8,
+      name: "Sara Helgeson",
+      title: "Lending Compliance Officer",
+      overview: "Sara gave me a tour of the Fargo office and helped me understand how compliance roles are evolving with the AgCountry collaboration. Meeting her and others in Fargo provided great insight into how interconnected teams are during transitions.",
+      keyTakeaways: [
+        "Works on compliance and risk as collaboration evolves",
+        "Fargo office is full of energy and adapting to change",
+        "Jessica and Steph helped explain AgCountry's progress",
+        "Showed how different departments align during major organizational changes"
+      ]
+    },
+    {
+      id: 9,
+      name: "Rex Earl & Security Team",
+      title: "Information Security Team",
+      overview: "Rex and his team gave a breakdown of FCSA's security structure, including app security, identity, and data. I found app security the most fascinating, especially how they test for vulnerabilities. It made me think more critically about writing secure code.",
+      keyTakeaways: [
+        "Learned about the 3 divisions: Application Security, Identity, Data",
+        "Application Security includes penetration testing for vulnerabilities",
+        "Reinforced how crucial security is at every step of development",
+        "Encouraged me to start secure coding practices early in my career"
       ]
     }
   ];

@@ -18,79 +18,135 @@ const Gallery = () => {
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Placeholder media items - replace with your actual content
+  // Your actual internship photos and memories
   const mediaItems: MediaItem[] = [
     {
       id: 1,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop',
-      title: 'First Day at the Office',
-      description: 'My workspace setup on the first day of internship. Clean desk, dual monitors, and ready to code!',
-      date: 'June 1, 2024'
+      src: '/images/gallery/intern_group_photo.jpg',
+      title: 'Intern Group Photo',
+      description: 'Group photo with fellow interns on the first day. Great to meet everyone and begin the summer together.',
+      date: 'May 21, 2024'
     },
     {
       id: 2,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
-      title: 'Team Meeting Setup',
-      description: 'Setting up for our first team standup meeting. Learning about agile methodologies.',
-      date: 'June 3, 2024'
+      src: '/images/gallery/1H0A1098.jpg',
+      title: 'Orientation Day',
+      description: 'Orientation day at FCSA – kicking off the internship by learning about core values and meeting the team.',
+      date: 'May 21, 2024'
     },
     {
       id: 3,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop',
-      title: 'Code Review Session',
-      description: 'Reviewing code with my mentor. Learning best practices and clean code principles.',
-      date: 'June 10, 2024'
+      src: '/images/gallery/1H0A8334.jpg',
+      title: 'Orientation Moments',
+      description: 'Capturing a moment from orientation. Excited to begin the journey.',
+      date: 'May 21, 2024'
     },
     {
       id: 4,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop',
-      title: 'Late Night Coding',
-      description: 'Working on a challenging feature implementation. The satisfaction of solving complex problems.',
-      date: 'June 15, 2024'
+      src: '/images/gallery/IMG_4390.jpg',
+      title: 'Desk Setup',
+      description: 'My workspace setup – dual monitors and a clean desk for productive coding days.',
+      date: 'May 22, 2024'
     },
     {
       id: 5,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=600&fit=crop',
-      title: 'Remote Work Day',
-      description: 'Working from home setup. Maintaining productivity while enjoying the flexibility.',
-      date: 'June 20, 2024'
+      src: '/images/gallery/1H0A8652.jpg',
+      title: 'Wireframing Session',
+      description: 'Working on UI/UX planning in Figma – learning how much effort goes into great design.',
+      date: 'June 10, 2024'
     },
     {
       id: 6,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&h=600&fit=crop',
-      title: 'Innovation Session',
-      description: 'Brainstorming new ideas and solutions. The creative side of software development.',
-      date: 'June 25, 2024'
+      src: '/images/gallery/Smashpark 13.jpg',
+      title: 'Smash Park Bowling',
+      description: 'Bowling night at Smash Park with the interns – a fun way to unwind and connect.',
+      date: 'June 26, 2024'
     },
     {
       id: 7,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop',
-      title: 'Team Outing',
-      description: 'Company team building event in nature. Great opportunity to bond with colleagues.',
-      date: 'July 1, 2024'
+      src: '/images/gallery/IMG_4400.JPG',
+      title: 'More Bowling at Smash Park',
+      description: 'Another shot from the Smash Park bowling outing – intern fun continues.',
+      date: 'June 26, 2024'
     },
     {
       id: 8,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&h=600&fit=crop',
-      title: 'Office Views',
-      description: 'Beautiful view from the office. Inspiring environment that boosts creativity.',
-      date: 'July 5, 2024'
+      src: '/images/gallery/Intern Vol 2.jpg',
+      title: 'Diaper Organization Group Photo',
+      description: 'Volunteering with the team for a local diaper charity. A rewarding day giving back to the community.',
+      date: 'June 27, 2024'
     },
     {
       id: 9,
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&h=600&fit=crop',
-      title: 'Project Milestone',
-      description: 'Celebrating the completion of a major project milestone. Waves of success!',
-      date: 'July 10, 2024'
+      src: '/images/gallery/Intern Vol Full Group 6.jpg',
+      title: 'Volunteer Group Photo',
+      description: 'Team photo after volunteering for multiple local organizations. Great way to wrap up a week of impact.',
+      date: 'June 27, 2024'
+    },
+    {
+      id: 10,
+      type: 'image',
+      src: '/images/gallery/Diaper Bank ODM Truck 6.25.JPEG',
+      title: 'Diaper Truck',
+      description: 'Packed truck full of donated diapers. A tangible impact from our volunteering efforts.',
+      date: 'June 27, 2024'
+    },
+    {
+      id: 11,
+      type: 'image',
+      src: '/images/gallery/IMG_4468.jpg',
+      title: 'EAC Golf Outing',
+      description: 'EAC golf outing with coworkers – beautiful day for bonding outside the office.',
+      date: 'June 20, 2024'
+    },
+    {
+      id: 12,
+      type: 'image',
+      src: '/images/gallery/IMG_4503.JPG',
+      title: 'Golfing with Friends',
+      description: 'Afternoon golf with intern friends. Perfect way to build connections and enjoy the sun.',
+      date: 'June 20, 2024'
+    },
+    {
+      id: 13,
+      type: 'video',
+      src: '/images/gallery/httpsvgroupmecom10386214220250618T235752Z689391de1920x1080r0mp4_..MP4',
+      title: 'Golf Swing Video',
+      description: 'Video capture of my golf swing – form needs work but had a great time!',
+      date: 'June 20, 2024'
+    },
+    {
+      id: 14,
+      type: 'image',
+      src: '/images/gallery/IMG_4557.jpg',
+      title: 'Professional Headshot',
+      description: 'My official headshot during the internship. Used for internal and professional profiles.',
+      date: 'June 5, 2024'
+    },
+    {
+      id: 15,
+      type: 'image',
+      src: '/images/gallery/IMG_4583.JPG',
+      title: 'Career Bucket List Activity',
+      description: 'Participating in the career bucket list activity – thinking big about future goals.',
+      date: 'May 23, 2024'
+    },
+    {
+      id: 16,
+      type: 'image',
+      src: '/images/gallery/IMG_4585.JPG',
+      title: 'Additional Memory',
+      description: 'Another great moment from the internship experience.',
+      date: 'June 15, 2024'
     }
   ];
 
@@ -162,16 +218,6 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* Placeholder for more content */}
-        <div className="mt-12 text-center">
-          <Card className="p-8 border-dashed">
-            <div className="text-muted-foreground">
-              <ImageIcon className="h-12 w-12 mx-auto mb-4 opacity-50" />
-              <h3 className="text-lg font-medium mb-2">More memories coming soon!</h3>
-              <p>As my internship progresses, I'll be adding more photos and videos to showcase my journey.</p>
-            </div>
-          </Card>
-        </div>
       </div>
 
       {/* Modal */}
