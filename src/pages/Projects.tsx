@@ -19,78 +19,44 @@ interface Project {
 }
 
 const Projects = () => {
-  // Placeholder projects - replace with your actual projects
+  // My actual projects
   const projects: Project[] = [
     {
       id: 1,
-      title: "Customer Dashboard Redesign",
-      description: "Complete redesign of the customer portal with modern UI/UX principles and improved performance.",
-      longDescription: "Led the frontend development for a complete redesign of the customer dashboard, focusing on improving user experience and performance. Implemented responsive design patterns, optimized load times, and introduced new interactive features that increased user engagement by 40%.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Chart.js", "REST API"],
+      title: "Balance Sheet Project",
+      description: "Financial analysis and reporting application built with modern web technologies.",
+      longDescription: "Developed a comprehensive balance sheet application that allows users to input financial data, generate reports, and visualize financial health through interactive charts and summaries.",
+      technologies: ["React", "TypeScript", "Chart.js", "CSS", "Financial APIs"],
       status: 'completed',
       category: 'web',
-      github: "https://github.com/yourusername/customer-dashboard",
-      liveUrl: "https://dashboard.company.com",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
-      startDate: "June 2024",
-      endDate: "July 2024"
+      github: "https://github.com/Ikuchar1/balance-sheet",
+      startDate: "May 2025",
+      endDate: "July 2025"
     },
     {
       id: 2,
-      title: "API Integration Service",
-      description: "Microservice for handling third-party API integrations with rate limiting and error handling.",
-      longDescription: "Developed a robust microservice to handle multiple third-party API integrations. Implemented rate limiting, retry mechanisms, and comprehensive error handling. The service processes over 10,000 requests daily with 99.9% uptime.",
-      technologies: ["Node.js", "Express", "MongoDB", "Redis", "Docker", "Jest"],
+      title: "Hall of Champions",
+      description: "Sports achievement tracking and recognition platform.",
+      longDescription: "Created a platform to track and celebrate athletic achievements, featuring player profiles, statistics tracking, and a hall of fame system for recognizing outstanding performances.",
+      technologies: ["React", "JavaScript", "Database", "UI/UX Design"],
       status: 'completed',
-      category: 'backend',
-      github: "https://github.com/yourusername/api-service",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop",
-      startDate: "June 2024",
-      endDate: "July 2024"
+      category: 'web',
+      github: "https://github.com/Ikuchar1/hall-of-champions",
+      startDate: "June 2025",
+      endDate: "August 2025"
     },
     {
       id: 3,
-      title: "Real-time Analytics Platform",
-      description: "Dashboard for real-time data visualization with WebSocket connections and interactive charts.",
-      longDescription: "Building a comprehensive analytics platform that provides real-time insights into user behavior and system performance. Features include customizable dashboards, alert systems, and automated reporting.",
-      technologies: ["React", "D3.js", "WebSocket", "Python", "FastAPI", "PostgreSQL"],
-      status: 'in-progress',
+      title: "Personal Portfolio Website",
+      description: "This very website - showcasing my internship journey and projects.",
+      longDescription: "Built a responsive portfolio website to document my internship experience, showcase completed projects, and demonstrate my web development skills using modern React and design principles.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design"],
+      status: 'completed',
       category: 'web',
-      github: "https://github.com/yourusername/analytics-platform",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop",
-      startDate: "July 2024"
-    },
-    {
-      id: 4,
-      title: "Mobile App Prototype",
-      description: "Cross-platform mobile application for employee task management and communication.",
-      longDescription: "Designing and developing a mobile application prototype for internal employee use. The app will streamline task management, team communication, and provide offline capabilities for remote workers.",
-      technologies: ["React Native", "TypeScript", "Firebase", "SQLite", "Redux"],
-      status: 'planned',
-      category: 'mobile',
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop",
-      startDate: "August 2024"
-    },
-    {
-      id: 5,
-      title: "Machine Learning Data Pipeline",
-      description: "Automated pipeline for processing and analyzing large datasets for ML model training.",
-      longDescription: "Creating an automated data pipeline that processes, cleans, and transforms large datasets for machine learning applications. Includes data validation, feature engineering, and model training automation.",
-      technologies: ["Python", "Apache Airflow", "Pandas", "Scikit-learn", "AWS S3", "Docker"],
-      status: 'planned',
-      category: 'ai',
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=250&fit=crop",
-      startDate: "August 2024"
-    },
-    {
-      id: 6,
-      title: "Documentation Site",
-      description: "Interactive documentation website for internal APIs and development guidelines.",
-      longDescription: "Developing a comprehensive documentation site that serves as the central hub for all internal APIs, coding standards, and development guidelines. Features include interactive API testing, code examples, and search functionality.",
-      technologies: ["Next.js", "MDX", "Algolia", "TypeScript", "Vercel"],
-      status: 'planned',
-      category: 'web',
-      startDate: "August 2024"
+      github: "https://github.com/Ikuchar1/portfolio",
+      liveUrl: "https://ianportfolio.com",
+      startDate: "July 2025",
+      endDate: "August 2025"
     }
   ];
 
@@ -199,46 +165,10 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Project Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">{completedProjects.length}</div>
-                <p className="text-sm text-muted-foreground">Completed</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">{inProgressProjects.length}</div>
-                <p className="text-sm text-muted-foreground">In Progress</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-600">{plannedProjects.length}</div>
-                <p className="text-sm text-muted-foreground">Planned</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">{projects.length}</div>
-                <p className="text-sm text-muted-foreground">Total Projects</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* Completed Projects */}
         {completedProjects.length > 0 && (
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-green-600">✅ Completed Projects</h2>
+            <h2 className="text-2xl font-bold mb-6 text-primary">✅ Completed Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {completedProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
