@@ -141,15 +141,6 @@ const Gallery = () => {
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {item.type === 'video' ? (
-                      <Play className="h-12 w-12 text-white" />
-                    ) : (
-                      <ImageIcon className="h-12 w-12 text-white" />
-                    )}
-                  </div>
-                </div>
               </div>
               <div className="p-4">
                 <h3 className="font-semibold mb-2 line-clamp-1">{item.title}</h3>
