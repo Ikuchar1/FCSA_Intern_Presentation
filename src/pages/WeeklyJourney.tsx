@@ -286,7 +286,7 @@ const WeeklyJourney = () => {
                         Skills Developed
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {week.skills.map((skill) => (
+                        {(week.skills || []).map((skill) => (
                           <Badge key={skill} variant="secondary" className="text-xs">
                             {skill}
                           </Badge>
@@ -302,14 +302,14 @@ const WeeklyJourney = () => {
                         <CheckCircle className="h-5 w-5 text-primary" />
                         Key Achievements
                       </h4>
-                      <ul className="space-y-2">
-                        {week.achievements.map((achievement, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm">
-                            <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
+                       <ul className="space-y-2">
+                         {(week.achievements || []).map((achievement, idx) => (
+                           <li key={idx} className="flex items-center gap-2 text-sm">
+                             <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                             {achievement}
+                           </li>
+                         ))}
+                       </ul>
                     </div>
 
                     <div>
@@ -317,29 +317,29 @@ const WeeklyJourney = () => {
                         <Lightbulb className="h-5 w-5 text-accent" />
                         Week Highlights
                       </h4>
-                      <ul className="space-y-2">
-                        {week.highlights.map((highlight, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm">
-                            <div className="h-2 w-2 bg-accent rounded-full flex-shrink-0 mt-2" />
-                            <span className="text-muted-foreground">{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
+                       <ul className="space-y-2">
+                         {(week.highlights || []).map((highlight, idx) => (
+                           <li key={idx} className="flex items-start gap-2 text-sm">
+                             <div className="h-2 w-2 bg-accent rounded-full flex-shrink-0 mt-2" />
+                             <span className="text-muted-foreground">{highlight}</span>
+                           </li>
+                         ))}
+                       </ul>
                     </div>
 
-                    {week.challenges.length > 0 && (
-                      <div>
-                        <h4 className="font-semibold text-lg mb-3">Challenges Overcome</h4>
-                        <ul className="space-y-2">
-                          {week.challenges.map((challenge, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-sm">
-                              <div className="h-2 w-2 bg-destructive rounded-full flex-shrink-0 mt-2" />
-                              <span className="text-muted-foreground">{challenge}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                     {(week.challenges || []).length > 0 && (
+                       <div>
+                         <h4 className="font-semibold text-lg mb-3">Challenges Overcome</h4>
+                         <ul className="space-y-2">
+                           {(week.challenges || []).map((challenge, idx) => (
+                             <li key={idx} className="flex items-start gap-2 text-sm">
+                               <div className="h-2 w-2 bg-destructive rounded-full flex-shrink-0 mt-2" />
+                               <span className="text-muted-foreground">{challenge}</span>
+                             </li>
+                           ))}
+                         </ul>
+                       </div>
+                     )}
                   </div>
                 </div>
               </CardContent>
