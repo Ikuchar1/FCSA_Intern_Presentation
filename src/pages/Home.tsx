@@ -368,29 +368,29 @@ const Home = () => {
               </div>
               <div className="flex justify-center gap-8 flex-wrap">
                 <a 
-                  href="mailto:your.email@example.com" 
+                  href="mailto:ian1kuchar@gmail.com" 
                   className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                 >
                   <Mail className="h-5 w-5" />
-                  Email Me
+                  ian1kuchar@gmail.com
                 </a>
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/Ikuchar1" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-3 border border-border rounded-lg hover:bg-accent transition-colors"
                 >
                   <Github className="h-5 w-5" />
-                  GitHub
+                  Ikuchar1
                 </a>
                 <a 
-                  href="https://linkedin.com/in/yourprofile" 
+                  href="https://linkedin.com/in/ian-kuchar" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-3 border border-border rounded-lg hover:bg-accent transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
-                  LinkedIn
+                  ian-kuchar
                 </a>
               </div>
             </CardContent>
