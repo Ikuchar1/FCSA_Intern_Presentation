@@ -14,7 +14,7 @@ const Home = () => {
 
   // Internship details - update these with your actual dates
   const internshipStart = new Date("2024-06-01"); // Update with your start date
-  const internshipEnd = new Date("2024-08-30"); // Update with your end date
+  const internshipEnd = new Date("2024-08-14T17:00:00Z"); // August 14th at Noon Central Time
   const totalDays = Math.ceil((internshipEnd.getTime() - internshipStart.getTime()) / (1000 * 60 * 60 * 24));
   const daysCompleted = Math.ceil((new Date().getTime() - internshipStart.getTime()) / (1000 * 60 * 60 * 24));
   const progressPercent = Math.min(Math.max((daysCompleted / totalDays) * 100, 0), 100);
