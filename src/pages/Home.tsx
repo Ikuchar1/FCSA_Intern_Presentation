@@ -13,7 +13,7 @@ const Home = () => {
   });
 
   // Internship details - update these with your actual dates
-  const internshipStart = new Date("2024-06-01"); // Update with your start date
+  const internshipStart = new Date("2024-05-21"); // May 21st, 2024
   const internshipEnd = new Date("2024-08-14T17:00:00Z"); // August 14th at Noon Central Time
   const totalDays = Math.ceil((internshipEnd.getTime() - internshipStart.getTime()) / (1000 * 60 * 60 * 24));
   const daysCompleted = Math.ceil((new Date().getTime() - internshipStart.getTime()) / (1000 * 60 * 60 * 24));
