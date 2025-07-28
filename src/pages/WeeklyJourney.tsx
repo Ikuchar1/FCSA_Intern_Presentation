@@ -229,12 +229,12 @@ const WeeklyJourney = () => {
               </CardHeader>
               
               <CardContent className="pt-6">
-                {/* Week Image */}
+                {/* Week Image
                 <div className="mb-6">
                   <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center text-muted-foreground">
                     Week {week.week} Image
                   </div>
-                </div>
+                </div> */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* Left Column */}
                   <div className="space-y-6">
