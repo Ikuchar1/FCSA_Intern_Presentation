@@ -8,375 +8,171 @@ interface WeekData {
   title: string;
   dates: string;
   focus: string;
-  goals: string[];
+  summary: string;
   achievements: string[];
+  highlights: string[];
   skills: string[];
   challenges: string[];
-  highlights: string[];
-  progress: number;
   status: 'completed' | 'current' | 'upcoming';
+  image?: string;
 }
 
 const WeeklyJourney = () => {
   const weeklyData: WeekData[] = [
     {
       week: 1,
-      title: "Onboarding & Environment Setup",
-      dates: "May 21 - May 25, 2025",
+      title: "Getting familiar with team, tools, and company culture",
+      dates: "May 21–23",
       focus: "Getting familiar with team, tools, and company culture",
-      goals: [
-        "Complete onboarding process",
-        "Set up development environment", 
-        "Meet team members",
-        "Understand project structure"
-      ],
-      achievements: [
-        "Successfully configured development environment",
-        "Completed all HR onboarding requirements",
-        "Established mentor relationship",
-        "First team meeting participation"
-      ],
-      skills: ["Git/GitHub", "Team Communication", "Project Management Tools"],
-      challenges: [
-        "Learning new tech stack",
-        "Understanding company processes"
-      ],
-      highlights: [
-        "Warm welcome from the team",
-        "Impressed by company culture",
-        "Excited about upcoming projects"
-      ],
-      progress: 100,
+      summary: "This was orientation week. I met the other interns and team members, learned about FCSA's core values, and took the DISC assessment to understand communication styles. It was a strong start for building relationships and getting set up for success.",
+      achievements: ["Completed onboarding", "DISC training", "met team"],
+      highlights: ["Orientation events", "intern welcome sessions"],
+      skills: ["Communication awareness", "team onboarding", "DISC analysis"],
+      challenges: ["Adjusting to a new corporate environment"],
       status: 'completed'
     },
     {
       week: 2,
-      title: "Learning & Exploration",
-      dates: "May 28 - Jun 1, 2025",
-      focus: "Deep dive into technologies and first small tasks",
-      goals: [
-        "Master React fundamentals",
-        "Complete first coding assignment",
-        "Shadow senior developers",
-        "Learn company coding standards"
-      ],
-      achievements: [
-        "Built first React component",
-        "Successfully completed coding challenge",
-        "Participated in code review process",
-        "Documented learning progress"
-      ],
-      skills: ["React", "TypeScript", "Code Review", "Documentation"],
-      challenges: [
-        "TypeScript learning curve",
-        "Understanding existing codebase"
-      ],
-      highlights: [
-        "Positive feedback on first assignment",
-        "Great mentorship from senior dev",
-        "Feeling more confident with tools"
-      ],
-      progress: 100,
+      title: "Team formation and foundational project prep",
+      dates: "May 27–30",
+      focus: "Team formation and foundational project prep",
+      summary: "Our team launched with a DISC-based alignment session. We learned about SAFe Agile, started the Hall of Legends tutorial project, and worked our first remote day. The Topgolf outing was a great bonding experience.",
+      achievements: ["Team alignment", "started coding tutorials"],
+      highlights: ["SAFe Agile intro", "Topgolf outing"],
+      skills: ["Agile frameworks", "self-directed learning", "async work"],
+      challenges: ["Navigating remote collaboration early on"],
       status: 'completed'
     },
     {
       week: 3,
-      title: "First Real Project",
-      dates: "Jun 4 - Jun 8, 2025",
-      focus: "Starting work on Balance Sheet application",
-      goals: [
-        "Design application architecture",
-        "Create project wireframes",
-        "Set up project repository",
-        "Begin frontend development"
-      ],
-      achievements: [
-        "Completed project planning phase",
-        "Created detailed wireframes",
-        "Set up clean project structure",
-        "Implemented basic UI components"
-      ],
-      skills: ["Project Planning", "UI/UX Design", "React Architecture"],
-      challenges: [
-        "Balancing design and functionality",
-        "Time management"
-      ],
-      highlights: [
-        "Project approval from mentor",
-        "Great feedback on design approach",
-        "Feeling ownership of project"
-      ],
-      progress: 100,
+      title: "Agile in action and professional development",
+      dates: "June 2–6",
+      focus: "Agile in action and professional development",
+      summary: "We sat in on PI Planning sessions and created our own user stories. I attended a session on GitHub Copilot and joined the Quick Bytes AI Showcase, which helped expand my network and understanding of AI tools.",
+      achievements: ["Wrote and estimated stories", "engaged in AI discussion"],
+      highlights: ["Quick Bytes event", "GitHub Copilot demo"],
+      skills: ["Story pointing", "exploratory tech learning", "networking"],
+      challenges: ["Learning how to ask clarifying questions"],
       status: 'completed'
     },
     {
       week: 4,
-      title: "Balance Sheet Development",
-      dates: "Jun 11 - Jun 15, 2025",
-      focus: "Core functionality implementation",
-      goals: [
-        "Implement data input forms",
-        "Create calculation logic",
-        "Add data validation",
-        "Build responsive layout"
-      ],
-      achievements: [
-        "Working form submissions",
-        "Accurate financial calculations",
-        "Responsive design implementation",
-        "Error handling system"
-      ],
-      skills: ["Form Handling", "Data Validation", "Responsive Design", "Financial Logic"],
-      challenges: [
-        "Complex calculation requirements",
-        "Cross-browser compatibility"
-      ],
-      highlights: [
-        "First fully functional feature",
-        "Positive user testing feedback",
-        "Mentor praised code quality"
-      ],
-      progress: 100,
+      title: "User experience and design thinking",
+      dates: "June 9–13",
+      focus: "User experience and design thinking",
+      summary: "A full-day UI/UX workshop revealed how much planning goes into product design. I started working in Figma and attended my first Bytes & Insights session, where I also started planning to lead the next one.",
+      achievements: ["Participated in design workshops", "led intern engagement prep"],
+      highlights: ["Bytes & Insights", "first UI design efforts"],
+      skills: ["Figma", "UX analysis", "presentation prep"],
+      challenges: ["Learning Figma from scratch"],
       status: 'completed'
     },
     {
       week: 5,
-      title: "Data Visualization",
-      dates: "Jun 18 - Jun 22, 2025",
-      focus: "Adding charts and visual reports",
-      goals: [
-        "Integrate charting library",
-        "Create financial dashboards",
-        "Implement export features",
-        "Add print functionality"
-      ],
-      achievements: [
-        "Interactive charts implementation",
-        "Multiple report formats",
-        "PDF export capability",
-        "Print-optimized layouts"
-      ],
-      skills: ["Chart.js", "Data Visualization", "PDF Generation", "Print CSS"],
-      challenges: [
-        "Chart performance optimization",
-        "Mobile chart responsiveness"
-      ],
-      highlights: [
-        "Beautiful visual reports",
-        "Stakeholder presentation success",
-        "Feature request from other teams"
-      ],
-      progress: 100,
+      title: "Iteration and team culture",
+      dates: "June 16–20",
+      focus: "Iteration and team culture",
+      summary: "We reviewed our Figma progress and discussed prototyping in retrospectives. Our team had its first formal refinement and a golf outing that helped us connect more deeply with other FCSA professionals.",
+      achievements: ["Conducted retro/refinement", "built relationships"],
+      highlights: ["Golf outing", "meeting cross-functional teammates"],
+      skills: ["Feedback processing", "team retros", "design iteration"],
+      challenges: ["Redesigning based on feedback"],
       status: 'completed'
     },
     {
       week: 6,
-      title: "Testing & Refinement",
-      dates: "Jun 25 - Jun 29, 2025",
-      focus: "Quality assurance and user feedback integration",
-      goals: [
-        "Write comprehensive tests",
-        "Conduct user testing",
-        "Fix identified bugs",
-        "Optimize performance"
-      ],
-      achievements: [
-        "95% test coverage achieved",
-        "All critical bugs resolved",
-        "Performance improved by 40%",
-        "User satisfaction scores above 4.5/5"
-      ],
-      skills: ["Testing", "Debugging", "Performance Optimization", "User Research"],
-      challenges: [
-        "Edge case handling",
-        "Performance bottlenecks"
-      ],
-      highlights: [
-        "Zero critical bugs in production",
-        "Excellent user feedback",
-        "Project ready for deployment"
-      ],
-      progress: 100,
+      title: "Transitioning from design to code",
+      dates: "June 23–27",
+      focus: "Transitioning from design to code",
+      summary: "We finally started coding the group project and had a productive first sprint. I met with my Spark mentor Addy, joined an all-BT meeting, and took part in intern social events and a volunteer day with local nonprofits.",
+      achievements: ["Began coding", "joined mentoring", "participated in volunteer event"],
+      highlights: ["Smash Park intern gathering", "ERG sessions"],
+      skills: ["Component-based dev", "cross-team awareness", "volunteering"],
+      challenges: ["Translating design into code"],
       status: 'completed'
     },
     {
       week: 7,
-      title: "Hall of Champions Start",
-      dates: "Jul 2 - Jul 6, 2025",
-      focus: "Beginning second major project",
-      goals: [
-        "Project requirements analysis",
-        "Technology stack selection",
-        "Database design",
-        "Initial prototyping"
-      ],
-      achievements: [
-        "Comprehensive requirements document",
-        "Optimal tech stack chosen",
-        "Database schema designed",
-        "Working prototype created"
-      ],
-      skills: ["Requirements Analysis", "Database Design", "Technology Selection"],
-      challenges: [
-        "Complex data relationships",
-        "Scalability considerations"
-      ],
-      highlights: [
-        "Stakeholder enthusiasm for concept",
-        "Innovative approach recognition",
-        "Green light for full development"
-      ],
-      progress: 100,
+      title: "Gaining business context and system insight",
+      dates: "June 30–July 2",
+      focus: "Gaining business context and system insight",
+      summary: "I visited the Fargo office and learned about how they're preparing for system transitions. I also learned about central code management with Steven Carlson. It was eye-opening to see the real-world impact of our work.",
+      achievements: ["Visited Fargo team", "connected with field leaders"],
+      highlights: ["Office tour", "central code walkthrough"],
+      skills: ["Business operations understanding", "field insight", "tech logistics"],
+      challenges: ["Understanding legacy system changes"],
       status: 'completed'
     },
     {
       week: 8,
-      title: "Core Features Development",
-      dates: "Jul 9 - Jul 13, 2025",
-      focus: "Player profiles and statistics tracking",
-      goals: [
-        "User authentication system",
-        "Player profile creation",
-        "Statistics input interface",
-        "Data persistence layer"
-      ],
-      achievements: [
-        "Secure authentication implemented",
-        "Intuitive profile management",
-        "Efficient data entry system",
-        "Reliable data storage"
-      ],
-      skills: ["Authentication", "Database Operations", "User Interface Design"],
-      challenges: [
-        "Data security requirements",
-        "User experience optimization"
-      ],
-      highlights: [
-        "Smooth user onboarding flow",
-        "Positive initial user testing",
-        "Clean, maintainable code structure"
-      ],
-      progress: 100,
+      title: "Problem-solving and architecture decisions",
+      dates: "July 7–11",
+      focus: "Problem-solving and architecture decisions",
+      summary: "We ran into major issues implementing the regular card. After debugging, we decided to step back and rethink our structure — leading to what we called \"The Great Refactor of July 11th.\"",
+      achievements: ["Initiated project-wide refactor"],
+      highlights: ["Collaborative architecture discussion"],
+      skills: ["Debugging", "component architecture", "team decision-making"],
+      challenges: ["UI/styling complexity"],
       status: 'completed'
     },
     {
       week: 9,
-      title: "Advanced Features",
-      dates: "Jul 16 - Jul 20, 2025",
-      focus: "Hall of Fame and achievement system",
-      goals: [
-        "Achievement criteria system",
-        "Hall of Fame display",
-        "Recognition algorithms",
-        "Notification system"
-      ],
-      achievements: [
-        "Flexible achievement framework",
-        "Engaging Hall of Fame interface",
-        "Fair recognition algorithms",
-        "Real-time notifications"
-      ],
-      skills: ["Algorithm Design", "Notification Systems", "Complex UI Components"],
-      challenges: [
-        "Algorithm fairness",
-        "Performance with large datasets"
-      ],
-      highlights: [
-        "Innovative recognition system",
-        "High user engagement metrics",
-        "Positive stakeholder feedback"
-      ],
-      progress: 100,
+      title: "Execution after architecture overhaul",
+      dates: "July 14–18",
+      focus: "Execution after architecture overhaul",
+      summary: "We pushed through and completed the refactor, finalizing the default, crops, and feed inventory cards. Jason Cruise joined our retro and gave us thoughtful advice on how to work better with Copilot.",
+      achievements: ["Refactor complete", "new features launched"],
+      highlights: ["Productive retro with Jason"],
+      skills: ["Refactoring", "code quality focus", "GitHub Copilot usage"],
+      challenges: ["Refactor uncertainty and time crunch"],
       status: 'completed'
     },
     {
       week: 10,
-      title: "Portfolio Development",
-      dates: "Jul 23 - Jul 27, 2025",
-      focus: "Creating this portfolio website",
-      goals: [
-        "Portfolio design and planning",
-        "Content organization",
-        "Interactive components",
-        "Responsive implementation"
-      ],
-      achievements: [
-        "Professional portfolio design",
-        "Comprehensive project documentation",
-        "Engaging interactive elements",
-        "Perfect mobile responsiveness"
-      ],
-      skills: ["Portfolio Design", "Content Writing", "Advanced CSS", "Modern React Patterns"],
-      challenges: [
-        "Balancing content and visual appeal",
-        "Showcasing technical skills effectively"
-      ],
-      highlights: [
-        "Portfolio stands out from peers",
-        "Great feedback from mentors",
-        "Increased confidence in abilities"
-      ],
-      progress: 100,
+      title: "High-efficiency development and customer empathy",
+      dates: "July 21–25",
+      focus: "High-efficiency development and customer empathy",
+      summary: "We hit our stride, completing stories quickly post-refactor. A retail visit helped me better understand our users. We also had multiple team outings, showing how strong company culture supports great work.",
+      achievements: ["Rapid development", "deeper customer understanding"],
+      highlights: ["Round 1 outing", "retail FO visit", "EAC bowling"],
+      skills: ["Developer velocity", "stakeholder empathy", "team cohesion"],
+      challenges: ["Maintaining speed with quality"],
       status: 'completed'
     },
     {
       week: 11,
-      title: "Project Polish & Documentation",
-      dates: "Jul 30 - Aug 3, 2025",
-      focus: "Finalizing all projects and creating comprehensive documentation",
-      goals: [
-        "Complete project documentation",
-        "Create deployment guides",
-        "Record demo videos",
-        "Prepare presentation materials"
-      ],
-      achievements: [
-        "Comprehensive technical documentation",
-        "Professional demo videos",
-        "Deployment automation",
-        "Presentation materials ready"
-      ],
-      skills: ["Technical Writing", "Video Creation", "DevOps", "Presentation Skills"],
-      challenges: [
-        "Balancing detail and clarity",
-        "Time management across projects"
-      ],
-      highlights: [
-        "All projects production-ready",
-        "Documentation praised by team",
-        "Ready for final presentation"
-      ],
-      progress: 90,
+      title: "Placeholder",
+      dates: "July 28 – August 1",
+      focus: "Placeholder",
+      summary: "Summary coming soon.",
+      achievements: ["TBD"],
+      highlights: ["TBD"],
+      skills: ["TBD"],
+      challenges: ["TBD"],
       status: 'current'
     },
     {
       week: 12,
-      title: "Final Presentation & Wrap-up",
-      dates: "Aug 6 - Aug 14, 2025",
-      focus: "Final presentation and internship conclusion",
-      goals: [
-        "Deliver final presentation",
-        "Complete knowledge transfer",
-        "Gather feedback and testimonials",
-        "Plan future collaboration"
-      ],
-      achievements: [
-        "Outstanding final presentation",
-        "Smooth knowledge transfer",
-        "Excellent performance reviews",
-        "Offer for future collaboration"
-      ],
-      skills: ["Public Speaking", "Knowledge Transfer", "Professional Networking"],
-      challenges: [
-        "Presentation nerves",
-        "Summarizing 12 weeks effectively"
-      ],
-      highlights: [
-        "Standing ovation from audience",
-        "Job offer received",
-        "Lasting professional relationships"
-      ],
-      progress: 15,
+      title: "Placeholder",
+      dates: "August 4 – 8",
+      focus: "Placeholder",
+      summary: "Summary coming soon.",
+      achievements: ["TBD"],
+      highlights: ["TBD"],
+      skills: ["TBD"],
+      challenges: ["TBD"],
+      status: 'upcoming'
+    },
+    {
+      week: 13,
+      title: "Placeholder",
+      dates: "August 11 – 14",
+      focus: "Placeholder",
+      summary: "Summary coming soon.",
+      achievements: ["TBD"],
+      highlights: ["TBD"],
+      skills: ["TBD"],
+      challenges: ["TBD"],
       status: 'upcoming'
     }
   ];
@@ -424,43 +220,6 @@ const WeeklyJourney = () => {
             achievements, and the skills I've developed along the way.
           </p>
           
-          {/* Overall Progress */}
-          <div className="max-w-md mx-auto">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium">Overall Progress</span>
-              <span className="text-sm text-muted-foreground">{completedWeeks}/{totalWeeks} weeks</span>
-            </div>
-            <Progress value={overallProgress} className="h-3" />
-            <p className="text-sm text-muted-foreground mt-2">{overallProgress}% Complete</p>
-          </div>
-        </div>
-
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-primary mb-2">{completedWeeks}</div>
-              <p className="text-sm text-muted-foreground">Weeks Completed</p>
-            </CardContent>
-          </Card>
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-accent mb-2">3</div>
-              <p className="text-sm text-muted-foreground">Major Projects</p>
-            </CardContent>
-          </Card>
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-secondary mb-2">25+</div>
-              <p className="text-sm text-muted-foreground">Skills Learned</p>
-            </CardContent>
-          </Card>
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-primary mb-2">100+</div>
-              <p className="text-sm text-muted-foreground">Achievements</p>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Weekly Timeline */}
@@ -490,9 +249,9 @@ const WeeklyJourney = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">{week.progress}%</div>
-                    <Progress value={week.progress} className="w-24 h-2" />
+                  {/* Image placeholder */}
+                  <div className="w-32 h-24 bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm">
+                    Week {week.week} Image
                   </div>
                 </div>
               </CardHeader>
@@ -514,16 +273,11 @@ const WeeklyJourney = () => {
                     <div>
                       <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                         <Users className="h-5 w-5 text-primary" />
-                        Weekly Goals
+                        Summary
                       </h4>
-                      <ul className="space-y-2">
-                        {week.goals.map((goal, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm">
-                            <div className="h-2 w-2 bg-primary rounded-full flex-shrink-0" />
-                            {goal}
-                          </li>
-                        ))}
-                      </ul>
+                      <p className="text-muted-foreground bg-muted/50 p-3 rounded-lg text-sm">
+                        {week.summary}
+                      </p>
                     </div>
 
                     <div>
