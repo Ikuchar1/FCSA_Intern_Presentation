@@ -167,75 +167,45 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-          {mediaItems.map((item, index) => {
-            // Create dynamic sizing patterns
-            const isLarge = index % 7 === 0; // Every 7th item is large
-            const isMedium = index % 5 === 0 && !isLarge; // Every 5th item is medium
-            const isWide = index % 11 === 0; // Every 11th item spans wider
-            
-            return (
-              <Card 
-                key={item.id} 
-                className={`
-                  group cursor-pointer overflow-hidden break-inside-avoid mb-6
-                  transition-all duration-500 hover:scale-[1.02] 
-                  hover:shadow-2xl hover:shadow-primary/20
-                  animate-fade-in
-                  ${isLarge ? 'lg:col-span-2 xl:col-span-2' : ''}
-                  ${isWide ? 'sm:col-span-2' : ''}
-                `}
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                  animationFillMode: 'both'
-                }}
-                onClick={() => openModal(item, index)}
-              >
-                <div className={`
-                  relative overflow-hidden
-                  ${isLarge ? 'aspect-[4/5]' : isMedium ? 'aspect-[3/4]' : 'aspect-square'}
-                `}>
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-                  
-                  {item.type === 'video' ? (
-                    <>
-                      <video
-                        src={item.src}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        muted
-                        preload="metadata"
-                      />
-                      {/* Enhanced play button overlay */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-300 z-20">
-                        <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-lg">
-                          <Play className="h-8 w-8 text-black ml-1" fill="currentColor" />
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <img
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {mediaItems.map((item, index) => (
+            <Card 
+              key={item.id} 
+              className="group cursor-pointer overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105"
+              onClick={() => openModal(item, index)}
+            >
+              <div className="relative aspect-square overflow-hidden">
+                {item.type === 'video' ? (
+                  <>
+                    <video
                       src={item.src}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      muted
+                      preload="metadata"
                     />
-                  )}
-                  
-                  {/* Animated border on hover */}
-                  <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/50 transition-all duration-300 rounded-lg" />
-                </div>
-                
-                <div className="p-4 relative z-10">
-                  <h3 className="font-semibold mb-2 line-clamp-1 group-hover:text-primary transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2 group-hover:text-muted-foreground/80 transition-colors duration-300">
-                    {item.description}
-                  </p>
-                </div>
-              </Card>
-            );
-          })}
+                    {/* Play button overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors duration-300">
+                      <div className="bg-white/90 rounded-full p-3 group-hover:bg-white transition-colors duration-300">
+                        <Play className="h-6 w-6 text-black ml-1" fill="currentColor" />
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                )}
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold mb-2 line-clamp-1">{item.title}</h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  {item.description}
+                </p>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
 
