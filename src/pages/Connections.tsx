@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Coffee, MessageCircle } from "lucide-react";
+import { Users, Coffee, MessageCircle, Sparkles, ArrowUpRight } from "lucide-react";
 
 interface Connection {
   id: number;
@@ -90,68 +90,112 @@ const Connections = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="p-3 rounded-full bg-primary/10">
-              <Users className="h-8 w-8 text-primary" />
-            </div>
-            <h1 className="text-4xl font-bold text-foreground">Connections</h1>
+        <div className="text-center mb-16 relative">
+          {/* Background decoration */}
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute top-20 left-1/4 w-32 h-32 bg-accent/10 rounded-full blur-2xl" />
+            <div className="absolute top-10 right-1/4 w-24 h-24 bg-primary/10 rounded-full blur-xl" />
           </div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="relative p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 backdrop-blur-sm border border-primary/20">
+              <Users className="h-10 w-10 text-primary" />
+              <div className="absolute -top-1 -right-1">
+                <Sparkles className="h-4 w-4 text-accent animate-pulse" />
+              </div>
+            </div>
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+              Connections
+            </h1>
+          </div>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Building meaningful professional relationships through one-on-one conversations and coffee chats during my internship.
           </p>
-          <div className="flex items-center justify-center gap-6 mt-6">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Coffee className="h-5 w-5" />
-              <span>{connections.length} conversations</span>
+          <div className="flex items-center justify-center gap-8 mt-8">
+            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border/50">
+              <div className="p-1.5 rounded-full bg-primary/10">
+                <Coffee className="h-4 w-4 text-primary" />
+              </div>
+              <span className="font-medium text-foreground">{connections.length} conversations</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MessageCircle className="h-5 w-5" />
-              <span>Cross-functional insights</span>
+            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border/50">
+              <div className="p-1.5 rounded-full bg-accent/10">
+                <MessageCircle className="h-4 w-4 text-accent" />
+              </div>
+              <span className="font-medium text-foreground">Cross-functional insights</span>
             </div>
           </div>
         </div>
 
         {/* Connections Grid */}
         <div className="grid grid-cols-1 gap-8">
-          {connections.map((connection) => (
-            <Card key={connection.id} className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader className="pb-4">
+          {connections.map((connection, index) => (
+            <Card 
+              key={connection.id} 
+              className="group relative overflow-hidden bg-gradient-to-br from-card via-card to-card/50 border-border/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1 animate-fade-in"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] via-transparent to-accent/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Animated border */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm -z-10" />
+              
+              <CardHeader className="pb-6 relative">
                 <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="text-xl font-semibold text-foreground mb-1">
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {connection.name}
                     </CardTitle>
-                    <Badge variant="secondary" className="text-sm">
+                    <Badge 
+                      variant="secondary" 
+                      className="text-sm bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 hover:border-primary/40 transition-colors duration-300"
+                    >
                       {connection.title}
                     </Badge>
                   </div>
-                  <div className="p-2 rounded-full bg-primary/10">
-                    <Users className="h-5 w-5 text-primary" />
+                  <div className="relative p-3 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300 group-hover:scale-110">
+                    <Users className="h-6 w-6 text-primary" />
+                    <ArrowUpRight className="absolute -top-1 -right-1 h-3 w-3 text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-8 relative">
                 {/* Overview */}
-                <div>
-                  <h4 className="font-medium text-foreground mb-2">Overview</h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-1 h-6 bg-gradient-to-b from-primary to-accent rounded-full" />
+                    <h4 className="text-lg font-semibold text-foreground">Overview</h4>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed text-base pl-5 relative">
+                    <span className="absolute left-0 top-0 w-3 h-3 bg-primary/20 rounded-full" />
                     {connection.overview}
                   </p>
                 </div>
 
                 {/* Key Takeaways */}
-                <div>
-                  <h4 className="font-medium text-foreground mb-3">Key Takeaways</h4>
-                  <ul className="space-y-2">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2">
+                    <div className="w-1 h-6 bg-gradient-to-b from-accent to-primary rounded-full" />
+                    <h4 className="text-lg font-semibold text-foreground">Key Takeaways</h4>
+                  </div>
+                  <ul className="space-y-3 pl-5">
                     {connection.keyTakeaways.map((takeaway, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground leading-relaxed">
+                      <li 
+                        key={index} 
+                        className="flex items-start gap-4 group/item"
+                        style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                      >
+                        <div className="relative mt-2 flex-shrink-0">
+                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent group-hover/item:scale-150 transition-transform duration-300" />
+                          <div className="absolute inset-0 w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent animate-ping opacity-20" />
+                        </div>
+                        <span className="text-muted-foreground leading-relaxed text-base group-hover/item:text-foreground transition-colors duration-300">
                           {takeaway}
                         </span>
                       </li>
@@ -164,14 +208,25 @@ const Connections = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16 p-8 bg-muted/50 rounded-lg">
-          <h3 className="text-xl font-semibold text-foreground mb-2">
-            Building Professional Networks
-          </h3>
-          <p className="text-muted-foreground">
-            These conversations have been invaluable for understanding different roles, gaining industry insights, 
-            and building relationships that will benefit my career growth.
-          </p>
+        <div className="relative mt-20 p-8 rounded-2xl bg-gradient-to-br from-card via-card/80 to-muted/20 border border-border/50 backdrop-blur-sm overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/10 rounded-full blur-xl" />
+          
+          <div className="relative text-center space-y-4">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Sparkles className="h-6 w-6 text-primary animate-pulse" />
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+                Building Professional Networks
+              </h3>
+              <Sparkles className="h-6 w-6 text-accent animate-pulse" style={{ animationDelay: '0.5s' }} />
+            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+              These conversations have been invaluable for understanding different roles, gaining industry insights, 
+              and building relationships that will benefit my career growth.
+            </p>
+          </div>
         </div>
       </div>
     </div>
