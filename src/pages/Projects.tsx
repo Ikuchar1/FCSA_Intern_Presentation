@@ -33,24 +33,25 @@ const Projects = () => {
       title: "Hall of Champions",
       subtitle: "Angular Learning Project • Summer 2024",
       shortDescription: "Our first project to learn Angular fundamentals with a creative twist.",
-      fullDescription: "This was our introduction to Angular, guided by a tutorial from our lead developer, Thomas. The original tutorial was for building a basic real estate website, but we decided to make it more engaging by turning it into a League of Legends-themed application called \"Hall of Champions.\" This project gave us a chance to get comfortable with Angular and establish good coding practices before diving into larger projects.",
+      fullDescription: "This was our introduction to Angular, guided by a tutorial from our lead developer, Thomas. The original tutorial was for building a basic real estate website, but we decided to make it more engaging by turning it into a League of Legends-themed application called \"Hall of Champions.\" This project gave us a chance to get comfortable with Angular and establish good coding practices before diving into larger projects.\n\nThe application featured a searchable database of League of Legends champions, where users could browse through different champions, view their details, and search for specific champions by name or role. One of the coolest features we implemented was the ability to export individual champion profiles as PDF documents, allowing users to save and share their favorite champion information offline.",
       keyPoints: [
         "First introduction to Angular framework and TypeScript",
         "Transformed a basic real estate tutorial into a gaming-themed application",
+        "Implemented champion search functionality with filtering capabilities",
+        "Built PDF export feature for individual champion profiles",
         "Established foundational coding practices and component structure",
         "Collaborated with team lead Thomas for guided learning",
         "Prepared foundation for more complex group projects"
       ],
       technologies: ["Angular", "TypeScript", "HTML", "SCSS"],
       images: [
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+        "/images/gallery/azir.jpeg"
       ],
       links: {
         github: "#",
         demo: "#"
       },
-      coverImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=450&fit=crop"
+      coverImage: "/images/gallery/holCover.jpeg"
     },
     {
       id: 2,

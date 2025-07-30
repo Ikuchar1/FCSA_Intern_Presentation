@@ -69,7 +69,7 @@ const Home = () => {
                     <div className="space-y-2 text-lg">
                       <p><span className="font-semibold">College:</span> University of Nebraska–Lincoln Raikes School</p>
                       <p><span className="font-semibold">Position:</span> Application Developer Intern</p>
-                      <p><span className="font-semibold">Hometown:</span> Bloomfield, NE</p>
+                      <p><span className="font-semibold">Team:</span> Cash Flow Coders</p>
                     </div>
                     
                     <p className="text-muted-foreground leading-relaxed max-w-xl">
