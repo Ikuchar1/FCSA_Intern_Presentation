@@ -198,12 +198,12 @@ const Projects = () => {
             )}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="flex gap-2">
             <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
               <DialogTrigger asChild>
                 <Button 
-                  className="flex-1" 
+                  className="w-full" 
                   onClick={() => {
                     setSelectedProject(project);
                     setCurrentImageIndex(0);
@@ -216,91 +216,29 @@ const Projects = () => {
                 </Button>
               </DialogTrigger>
             </Dialog>
-            
-            <Button 
-              size="icon" 
-              variant="outline"
-              className="hover:bg-primary hover:text-primary-foreground transition-colors"
-              aria-label="Quick preview"
-            >
-              <ExternalLink className="h-4 w-4" />
-            </Button>
           </div>
         </CardContent>
       </Card>
     );
   };
 
-  const ImageCarousel = ({ images, title }: { images: string[]; title: string }) => {
-    const nextImage = () => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    };
-
-    const previousImage = () => {
-      setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-    };
-
+  const ProjectImage = ({ images, title }: { images: string[]; title: string }) => {
     if (!images.length) {
       return (
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold">Project Images</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <CoverPlaceholder title="Screenshot 1" className="h-64 rounded-lg border" />
-            <CoverPlaceholder title="Screenshot 2" className="h-64 rounded-lg border" />
-          </div>
+        <div className="flex justify-center">
+          <CoverPlaceholder title="Project Preview" className="w-full max-w-2xl h-80 rounded-lg shadow-md" />
         </div>
       );
     }
 
     return (
-      <div className="space-y-4">
-        <h4 className="text-lg font-semibold">Project Images</h4>
-        <div className="relative">
-          <div className="relative overflow-hidden rounded-lg border bg-muted">
-            <img
-              src={images[currentImageIndex]}
-              alt={`${title} - Image ${currentImageIndex + 1}`}
-              className="w-full h-80 object-cover"
-            />
-            
-            {images.length > 1 && (
-              <>
-                <Button
-                  size="icon"
-                  variant="secondary"
-                  className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8"
-                  onClick={previousImage}
-                  aria-label="Previous image"
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                </Button>
-                <Button
-                  size="icon"
-                  variant="secondary"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8"
-                  onClick={nextImage}
-                  aria-label="Next image"
-                >
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
-              </>
-            )}
-          </div>
-          
-          {images.length > 1 && (
-            <div className="flex justify-center mt-3 gap-2">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentImageIndex ? 'bg-primary' : 'bg-muted-foreground/30'
-                  }`}
-                  onClick={() => setCurrentImageIndex(index)}
-                  aria-label={`View image ${index + 1}`}
-                />
-              ))}
-            </div>
-          )}
+      <div className="flex justify-center">
+        <div className="relative overflow-hidden rounded-lg shadow-md bg-muted w-full max-w-2xl">
+          <img
+            src={images[0]}
+            alt={`${title} preview`}
+            className="w-full h-80 object-contain"
+          />
         </div>
       </div>
     );
@@ -377,58 +315,23 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Images */}
-          <ImageCarousel images={selectedProject.images} title={selectedProject.title} />
-
-          {/* Tech Stack & Links */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <Code className="h-5 w-5 text-primary" />
-                Technologies Used
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {selectedProject.technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="font-medium">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <ExternalLink className="h-5 w-5 text-primary" />
-                Project Links
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {selectedProject.links.github && (
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={selectedProject.links.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
-                )}
-                {selectedProject.links.demo && (
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={selectedProject.links.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
-                    </a>
-                  </Button>
-                )}
-                {selectedProject.links.figma && (
-                  <Button size="sm" variant="outline" asChild>
-                    <a href={selectedProject.links.figma} target="_blank" rel="noopener noreferrer">
-                      <Figma className="h-4 w-4 mr-2" />
-                      Design
-                    </a>
-                  </Button>
-                )}
-              </div>
+          {/* Tech Stack */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Code className="h-5 w-5 text-primary" />
+              Technologies Used
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {selectedProject.technologies.map((tech) => (
+                <Badge key={tech} variant="secondary" className="px-4 py-2 text-sm font-semibold">
+                  {tech}
+                </Badge>
+              ))}
             </div>
           </div>
+
+          {/* Project Image */}
+          <ProjectImage images={selectedProject.images} title={selectedProject.title} />
         </div>
       </DialogContent>
     );
