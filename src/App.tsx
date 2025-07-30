@@ -8,6 +8,7 @@ import Gallery from "./pages/Gallery";
 import Projects from "./pages/Projects";
 import WeeklyJourney from "./pages/WeeklyJourney";
 import Connections from "./pages/Connections";
+import Reflection from "./pages/Reflection";
 import Navigation from "./components/Navigation";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/weekly-journey" element={<WeeklyJourney />} />
           <Route path="/connections" element={<Connections />} />
+          <Route path="/reflection" element={<Reflection />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
