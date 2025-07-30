@@ -115,20 +115,7 @@ const Connections = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Building meaningful professional relationships through one-on-one conversations and coffee chats during my internship.
           </p>
-          <div className="flex items-center justify-center gap-8 mt-8">
-            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border/50">
-              <div className="p-1.5 rounded-full bg-primary/10">
-                <Coffee className="h-4 w-4 text-primary" />
-              </div>
-              <span className="font-medium text-foreground">{connections.length} conversations</span>
-            </div>
-            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border/50">
-              <div className="p-1.5 rounded-full bg-accent/10">
-                <MessageCircle className="h-4 w-4 text-accent" />
-              </div>
-              <span className="font-medium text-foreground">Cross-functional insights</span>
-            </div>
-          </div>
+          
         </div>
 
         {/* Connections Grid */}

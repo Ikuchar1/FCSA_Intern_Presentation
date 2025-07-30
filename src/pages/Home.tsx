@@ -52,7 +52,7 @@ const Home = () => {
                 <div className="order-2 md:order-1 flex justify-center">
                   <div className="relative">
                     <img
-                      src="/images/gallery/internHeadshot.JPG"
+                      src="/images/gallery/aboutMePic.JPG"
                       alt="Ian Kuchar headshot"
                       className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg ring-4 ring-primary/10"
                     />
@@ -67,7 +67,7 @@ const Home = () => {
                     </h1>
                     
                     <div className="space-y-2 text-lg">
-                      <p><span className="font-semibold">College:</span> University of Nebraska–Lincoln (UNL)</p>
+                      <p><span className="font-semibold">College:</span> University of Nebraska–Lincoln Raikes School</p>
                       <p><span className="font-semibold">Position:</span> Application Developer Intern</p>
                       <p><span className="font-semibold">Hometown:</span> Bloomfield, NE</p>
                     </div>
@@ -82,23 +82,10 @@ const Home = () => {
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                       <Badge variant="secondary">Angular</Badge>
                       <Badge variant="secondary">.NET</Badge>
-                      <Badge variant="secondary">SQL</Badge>
-                      <Badge variant="secondary">Teamwork</Badge>
+                      <Badge variant="secondary">Collaboration</Badge>
                     </div>
                     
-                    {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                      <Button asChild>
-                        <a href="mailto:ian1kuchar@gmail.com" className="flex items-center gap-2">
-                          <Mail className="h-4 w-4" />
-                          Contact Me
-                        </a>
-                      </Button>
-                      <Button variant="outline" onClick={() => navigate('/gallery')} className="flex items-center gap-2">
-                        <Eye className="h-4 w-4" />
-                        View Gallery
-                      </Button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>

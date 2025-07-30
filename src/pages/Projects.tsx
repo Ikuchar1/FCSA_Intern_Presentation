@@ -140,14 +140,6 @@ const Projects = () => {
               </a>
             </Button>
           )}
-          {project.liveUrl && (
-            <Button size="sm" asChild>
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Live Demo
-              </a>
-            </Button>
-          )}
         </div>
       </CardContent>
     </Card>
