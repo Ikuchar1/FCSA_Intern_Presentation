@@ -111,13 +111,6 @@ const Gallery = () => {
       description: 'Video capture of my golf swing – form needs work but had a great time!'
     },
     {
-      id: 4,
-      type: 'image',
-      src: '/images/gallery/round1.JPG',
-      title: 'Round 1 Arcade Outing',
-      description: 'Team outing at Round 1 arcade in Lincoln – gaming and bonding with fellow interns.'
-    },
-    {
       id: 15,
       type: 'image',
       src: '/images/gallery/Diaper Bank ODM Truck 6.25.JPEG',
@@ -167,14 +160,14 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {mediaItems.map((item, index) => (
             <Card 
               key={item.id} 
               className="group cursor-pointer overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105"
               onClick={() => openModal(item, index)}
             >
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 {item.type === 'video' ? (
                   <>
                     <video
