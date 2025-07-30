@@ -10,6 +10,7 @@ import WeeklyJourney from "./pages/WeeklyJourney";
 import Connections from "./pages/Connections";
 import Reflection from "./pages/Reflection";
 import Navigation from "./components/Navigation";
+import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />

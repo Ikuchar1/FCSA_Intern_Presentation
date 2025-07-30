@@ -41,7 +41,7 @@ const Home = () => {
   }, [internshipEnd]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background" tabIndex={-1}>
       {/* About Me Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -226,7 +226,7 @@ const Home = () => {
           </Card>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 
