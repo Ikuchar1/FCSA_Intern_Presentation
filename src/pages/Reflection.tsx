@@ -51,20 +51,15 @@ const Reflection = () => {
                   <Lightbulb className="h-5 w-5 text-primary" />
                   How I Did It
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  [Placeholder text - I'll update this section with specific details about the conversations I had, 
-                  the different departments I connected with, and the insights I gained from each interaction. 
-                  This will include details about coffee chats, formal meetings, and informal networking opportunities.]
-                </p>
+                <Button 
+                  onClick={() => navigate('/connections')} 
+                  className="flex items-center gap-2 group/btn hover:scale-105 transition-transform duration-200"
+                  size="lg"
+                >
+                  <Users className="h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-200" />
+                  View Connections
+                </Button>
               </div>
-              <Button 
-                onClick={() => navigate('/connections')} 
-                className="flex items-center gap-2 group/btn hover:scale-105 transition-transform duration-200"
-                size="lg"
-              >
-                <Users className="h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-200" />
-                View Connections
-              </Button>
             </CardContent>
           </Card>
 
