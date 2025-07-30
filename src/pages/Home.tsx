@@ -54,7 +54,7 @@ const Home = () => {
                     <img
                       src="/images/gallery/internHeadshot.JPG"
                       alt="Ian Kuchar headshot"
-                      className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-lg ring-4 ring-primary/10"
+                      className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg ring-4 ring-primary/10"
                     />
                   </div>
                 </div>
