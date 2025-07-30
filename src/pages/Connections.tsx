@@ -160,7 +160,7 @@ const Connections = () => {
                     <h4 className="text-lg font-semibold text-foreground">Overview</h4>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-base pl-5 relative">
-                    <span className="absolute left-0 top-0 w-3 h-3 bg-primary/20 rounded-full" />
+                    <span className="absolute left-0 top-2 w-3 h-3 bg-primary/20 rounded-full" />
                     {connection.overview}
                   </p>
                 </div>
