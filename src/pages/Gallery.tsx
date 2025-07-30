@@ -22,72 +22,79 @@ const Gallery = () => {
     {
       id: 1,
       type: 'image',
-      src: '/images/gallery/intern_group_photo.jpg',
-      title: 'Intern Group Photo',
-      description: 'Group photo with fellow interns on the first day. Great to meet everyone and begin the summer together.'
-    },
-    {
-      id: 2,
-      type: 'image',
-      src: '/images/gallery/Smashpark 13.jpg',
-      title: 'Smash Park Bowling',
-      description: 'Bowling night at Smash Park with the interns – a fun way to unwind and connect.'
-    },
-    {
-      id: 3,
-      type: 'image',
-      src: '/images/gallery/deskImage.JPG',
-      title: 'Desk Setup',
-      description: 'My workspace setup – dual monitors and a clean desk for productive coding days.'
-    },
-    {
-      id: 5,
-      type: 'image',
-      src: '/images/gallery/Intern Vol 2.jpg',
-      title: 'Diaper Organization Group Photo',
-      description: 'Volunteering with the team for a local diaper charity. A rewarding day giving back to the community.'
-    },
-    {
-      id: 6,
-      type: 'image',
       src: '/images/gallery/wireframe.jpg',
       title: 'Wireframing Session',
       description: 'Working on UI/UX planning in Figma – learning how much effort goes into great design.'
     },
     {
-      id: 7,
-      type: 'image',
-      src: '/images/gallery/ap.jpg',
-      title: 'Access Period Volunteering',
-      description: 'Volunteering for Access Period – giving back to the community and supporting important causes.'
-    },
-    {
-      id: 8,
+      id: 2,
       type: 'image',
       src: '/images/gallery/aboutMePic.JPG',
       title: 'Professional Headshot',
       description: 'My official headshot during the internship. Used for internal and professional profiles.'
     },
     {
-      id: 9,
+      id: 3,
       type: 'image',
-      src: '/images/gallery/orientationPresentation.jpg',
-      title: 'Orientation Moments',
-      description: 'Capturing a moment from orientation. Excited to begin the journey.'
+      src: '/images/gallery/Smashpark 13.jpg',
+      title: 'Smash Park Bowling',
+      description: 'Bowling night at Smash Park with the interns – a fun way to unwind and connect.'
     },
     {
-      id: 10,
+      id: 4,
+      type: 'image',
+      src: '/images/gallery/careerBucketList.jpg',
+      title: 'Career Bucket List Activity',
+      description: 'Participating in the career bucket list activity – thinking big about future goals.'
+    },
+    {
+      id: 5,
+      type: 'image',
+      src: '/images/gallery/deskImage.JPG',
+      title: 'Desk Setup',
+      description: 'My workspace setup – dual monitors and a clean desk for productive coding days.'
+    },
+    {
+      id: 6,
+      type: 'image',
+      src: '/images/gallery/intern_group_photo.jpg',
+      title: 'Intern Group Photo',
+      description: 'Group photo with fellow interns on the first day. Great to meet everyone and begin the summer together.'
+    },
+    {
+      id: 7,
+      type: 'image',
+      src: '/images/gallery/pizza.JPG',
+      title: 'Farmers Market Pizza',
+      description: 'Delicious pizza from the local farmers market – a great lunch break during the internship.'
+    },
+    {
+      id: 8,
       type: 'image',
       src: '/images/gallery/raikesGolf.JPG',
       title: 'Golfing with Friends',
       description: 'Afternoon golf with Raikes friends. Perfect way to build connections and enjoy the sun.'
     },
     {
+      id: 9,
+      type: 'image',
+      src: '/images/gallery/Intern Vol 2.jpg',
+      title: 'Diaper Organization Group Photo',
+      description: 'Volunteering with the team for a local diaper charity. A rewarding day giving back to the community.'
+    },
+    {
+      id: 10,
+      type: 'image',
+      src: '/images/gallery/orientationPresentation.jpg',
+      title: 'Orientation Moments',
+      description: 'Capturing a moment from orientation. Excited to begin the journey.'
+    },
+    {
       id: 11,
       type: 'image',
-      src: '/images/gallery/careerBucketList.jpg',
-      title: 'Career Bucket List Activity',
-      description: 'Participating in the career bucket list activity – thinking big about future goals.'
+      src: '/images/gallery/ap.jpg',
+      title: 'Access Period Volunteering',
+      description: 'Volunteering for Access Period – giving back to the community and supporting important causes.'
     },
     {
       id: 12,
@@ -99,9 +106,9 @@ const Gallery = () => {
     {
       id: 13,
       type: 'image',
-      src: '/images/gallery/pizza.JPG',
-      title: 'Farmers Market Pizza',
-      description: 'Delicious pizza from the local farmers market – a great lunch break during the internship.'
+      src: '/images/gallery/teamFit.jpg',
+      title: 'Innovation Station Team',
+      description: 'Working in the innovation station for most of the internship – our collaborative workspace where ideas come to life.'
     },
     {
       id: 14,
@@ -113,16 +120,30 @@ const Gallery = () => {
     {
       id: 15,
       type: 'image',
-      src: '/images/gallery/Diaper Bank ODM Truck 6.25.JPEG',
-      title: 'Diaper Truck',
-      description: 'Packed truck full of donated diapers. A tangible impact from our volunteering efforts.'
+      src: '/images/gallery/Intern Vol Full Group 6.jpg',
+      title: 'Volunteer Group Photo',
+      description: 'Team photo after volunteering for multiple local organizations. Great way to wrap up a week of impact.'
     },
     {
       id: 16,
       type: 'image',
-      src: '/images/gallery/Intern Vol Full Group 6.jpg',
-      title: 'Volunteer Group Photo',
-      description: 'Team photo after volunteering for multiple local organizations. Great way to wrap up a week of impact.'
+      src: '/images/gallery/retailVisit.jpg',
+      title: 'Retail Visit',
+      description: 'Spend a morning at the Beatrice office seeing how the retail team operates. Great insights into the business side of things.'
+    },
+    {
+      id: 17,
+      type: 'image',
+      src: '/images/gallery/trioGolf.JPG',
+      title: 'Cash Flow Coders Golf',
+      description: 'Couple of Cash Flow Coders at the golf event – combining networking with recreation.'
+    },
+    {
+      id: 18,
+      type: 'image',
+      src: '/images/gallery/retro.jpg',
+      title: 'Working on the Refactor',
+      description: 'Deep in code during the refactor process – turning complex problems into elegant solutions.'
     }
   ];
 

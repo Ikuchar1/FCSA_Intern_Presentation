@@ -43,7 +43,7 @@ const Projects = () => {
       category: 'web',
       github: "https://github.com/Ikuchar1/hall-of-champions",
       startDate: "June 2025",
-      endDate: "August 2025"
+      endDate: "July 2025"
     },
     {
       id: 3,
