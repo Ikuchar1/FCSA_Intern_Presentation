@@ -64,7 +64,7 @@ const Gallery = () => {
     {
       id: 8,
       type: 'image',
-      src: '/images/gallery/internHeadshot.JPG',
+      src: '/images/gallery/aboutMePic.JPG',
       title: 'Professional Headshot',
       description: 'My official headshot during the internship. Used for internal and professional profiles.'
     },
