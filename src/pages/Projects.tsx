@@ -30,7 +30,7 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Hall of Champions",
+      title: "Hall of Legends",
       subtitle: "Angular Learning Project • Summer 2024",
       shortDescription: "Our first project to learn Angular fundamentals with a creative twist.",
       fullDescription: "This was our introduction to Angular, guided by a tutorial from our lead developer, Thomas. The original tutorial was for building a basic real estate website, but we decided to make it more engaging by turning it into a League of Legends-themed application called \"Hall of Champions.\" This project gave us a chance to get comfortable with Angular and establish good coding practices before diving into larger projects.\n\nThe application featured a searchable database of League of Legends champions, where users could browse through different champions, view their details, and search for specific champions by name or role. One of the coolest features we implemented was the ability to export individual champion profiles as PDF documents, allowing users to save and share their favorite champion information offline.",

@@ -67,7 +67,7 @@ const Home = () => {
                     </h1>
                     
                     <div className="space-y-2 text-lg">
-                      <p><span className="font-semibold">College:</span> University of Nebraska–Lincoln Raikes School</p>
+                      <p><span className="font-semibold">College:</span> University of Nebraska–Lincoln</p>
                       <p><span className="font-semibold">Position:</span> Application Developer Intern</p>
                       <p><span className="font-semibold">Team:</span> Cash Flow Coders</p>
                     </div>
