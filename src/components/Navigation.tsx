@@ -10,10 +10,10 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", path: "/", icon: Home },
-    { name: "Weekly Journey", path: "/weekly-journey", icon: Calendar },
-    { name: "Projects", path: "/projects", icon: Code },
-    { name: "Connections", path: "/connections", icon: Users },
     { name: "Reflection", path: "/reflection", icon: BookOpen },
+    { name: "Connections", path: "/connections", icon: Users },
+    { name: "Projects", path: "/projects", icon: Code },
+    { name: "Weekly Journey", path: "/weekly-journey", icon: Calendar },
     { name: "Gallery", path: "/gallery", icon: ImageIcon },
   ];
 
