@@ -46,18 +46,32 @@ const Reflection = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="bg-muted/30 rounded-lg p-4 border border-border/50">
-                <h3 className="text-lg font-semibold mb-3 text-foreground flex items-center gap-2">
+              <div className="bg-muted/30 rounded-lg p-6 border border-border/50">
+                <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center gap-2">
                   <Lightbulb className="h-5 w-5 text-primary" />
                   How I Did It
                 </h3>
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-muted-foreground leading-relaxed">Scheduled regular coffee chats with employees across different departments to learn about their roles and career paths.</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-muted-foreground leading-relaxed">Attended team meetings and company events to naturally build relationships and understand organizational dynamics.</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-muted-foreground leading-relaxed">Actively participated in intern activities and cross-functional projects to meet people outside my immediate team.</span>
+                  </div>
+                </div>
                 <Button 
                   onClick={() => navigate('/connections')} 
-                  className="flex items-center gap-2 group/btn hover:scale-105 transition-transform duration-200"
+                  className="w-full flex items-center justify-center gap-2 group/btn hover:scale-105 transition-transform duration-200"
                   size="lg"
                 >
                   <Users className="h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-200" />
-                  View Connections
+                  View All My Connections
                 </Button>
               </div>
             </CardContent>
@@ -81,25 +95,34 @@ const Reflection = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="bg-muted/30 rounded-lg p-4 border border-border/50">
-                <h3 className="text-lg font-semibold mb-3 text-foreground flex items-center gap-2">
+              <div className="bg-muted/30 rounded-lg p-6 border border-border/50">
+                <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center gap-2">
                   <Lightbulb className="h-5 w-5 text-accent" />
                   How I Did It
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  [Placeholder text - I'll update this section with specific examples of pair programming sessions, 
-                  collaboration techniques I learned, communication strategies that worked well, and how I improved 
-                  at understanding different coding perspectives and approaches from my teammates.]
-                </p>
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
+                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-muted-foreground leading-relaxed">Practiced active listening during pair programming sessions, making sure to understand my teammate's approach before suggesting alternatives.</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
+                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-muted-foreground leading-relaxed">Learned to articulate my thought process clearly when coding, explaining my reasoning and asking questions when I didn't understand.</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-background/50 border border-border/30">
+                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-muted-foreground leading-relaxed">Embraced the driver/navigator roles and got comfortable switching between leading and following during collaborative coding sessions.</span>
+                  </div>
+                </div>
+                <Button 
+                  onClick={() => navigate('/projects')} 
+                  className="w-full flex items-center justify-center gap-2 group/btn hover:scale-105 transition-transform duration-200"
+                  size="lg"
+                >
+                  <Code className="h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-200" />
+                  Explore My Projects
+                </Button>
               </div>
-              <Button 
-                onClick={() => navigate('/projects')} 
-                className="flex items-center gap-2 group/btn hover:scale-105 transition-transform duration-200"
-                size="lg"
-              >
-                <Code className="h-4 w-4 group-hover/btn:rotate-12 transition-transform duration-200" />
-                View Projects
-              </Button>
             </CardContent>
           </Card>
         </div>
