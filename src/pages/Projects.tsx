@@ -41,7 +41,7 @@ const Projects = () => {
         "Collaborated with team lead Thomas for guided learning",
         "Prepared foundation for more complex group projects"
       ],
-      technologies: ["Angular", "TypeScript", "HTML", "SCSS", "Gaming APIs"],
+      technologies: ["Angular", "TypeScript", "HTML", "SCSS"],
       images: [
         "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
@@ -67,15 +67,14 @@ const Projects = () => {
       ],
       technologies: ["Angular", ".NET", "C#", "SQL Server", "Figma", "Azure"],
       images: [
-        "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+        "/images/gallery/lineItem.png"
       ],
       links: {
         github: "#",
         figma: "#",
         demo: "#"
       },
-      coverImage: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=800&h=450&fit=crop"
+      coverImage: "/images/gallery/myAccountIcon.png"
     },
     {
       id: 3,
@@ -92,14 +91,13 @@ const Projects = () => {
       ],
       technologies: ["React", "TypeScript", "Tailwind CSS", "AI Tools", "Vite"],
       images: [
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
+        "/images/gallery/lovable.jpg"
       ],
       links: {
         github: "#",
         demo: "#"
       },
-      coverImage: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=450&fit=crop"
+      coverImage: "/images/gallery/lovable.jpg"
     }
   ];
 
