@@ -77,16 +77,7 @@ const Home = () => {
                       Currently gaining hands-on experience in full-stack development and modern technologies 
                       through my internship journey.
                     </p>
-                    
-                    <div className="flex justify-center md:justify-start">
-                      <a 
-                        href="#qr" 
-                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        <QrCode className="h-4 w-4" />
-                        Visit this site
-                      </a>
-                    </div>
+                  
                     
                     {/* Skills Badges */}
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
@@ -243,46 +234,22 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-8">Scan to Visit This Site</h2>
           <Card className="rounded-xl ring-1 ring-border/50 shadow-lg">
             <CardContent className="p-8 text-center">
-              {/* QR Placeholder */}
-              <div 
-                className="mx-auto mb-6 w-56 h-56 md:w-80 md:h-80 rounded-xl bg-gradient-to-br from-muted/50 to-muted/80 border border-border/50 flex items-center justify-center relative overflow-hidden"
-                role="img" 
-                aria-label="Placeholder for QR code"
-              >
-                {/* Diagonal grid pattern */}
-                <div className="absolute inset-0 opacity-20">
-                  <div className="w-full h-full" style={{
-                    backgroundImage: `repeating-linear-gradient(
-                      45deg,
-                      transparent,
-                      transparent 10px,
-                      hsl(var(--border)) 10px,
-                      hsl(var(--border)) 11px
-                    )`
-                  }}></div>
-                </div>
-                
-                {/* QR Icon */}
-                <QrCode className="h-16 w-16 md:h-20 md:w-20 text-muted-foreground z-10" />
+              {/* QR Code Image */}
+              <div className="mx-auto mb-6 w-56 h-56 md:w-80 md:h-80 rounded-xl border border-border/50 overflow-hidden">
+                <img 
+                  src="/images/gallery/qrCode.png" 
+                  alt="QR Code to visit this site"
+                  className="w-full h-full object-contain"
+                />
               </div>
               
-              {/* Placeholder Text */}
+              {/* Text */}
               <div className="space-y-2 mb-6">
-                <p className="font-semibold text-foreground">QR code coming soon</p>
-                <p className="text-sm text-muted-foreground">I'll add the actual link after deployment.</p>
+                <p className="font-semibold text-foreground">Scan to visit this portfolio</p>
+                <p className="text-sm text-muted-foreground">or visit directly:</p>
+                <p className="font-mono text-sm text-primary">iankucharinternship.vercel.app</p>
               </div>
               
-              {/* Future Action Buttons */}
-              <div className="flex justify-center gap-3">
-                <Button variant="outline" size="sm" disabled className="opacity-50">
-                  <Copy className="h-4 w-4 mr-2" />
-                  Copy Link
-                </Button>
-                <Button variant="outline" size="sm" disabled className="opacity-50">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download QR
-                </Button>
-              </div>
             </CardContent>
           </Card>
         </div>
