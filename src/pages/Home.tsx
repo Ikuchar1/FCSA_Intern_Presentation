@@ -229,25 +229,40 @@ const Home = () => {
       </section>
 
       {/* QR Code Section */}
-      <section id="qr" className="py-16 px-4 mt-12">
-        <div className="max-w-sm md:max-w-lg mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Scan to Visit This Site</h2>
-          <Card className="rounded-xl ring-1 ring-border/50 shadow-lg">
-            <CardContent className="p-8 text-center">
+      <section id="qr" className="py-20 px-4 mt-16 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Scan to Visit This Site
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Quick access to my portfolio on any device
+            </p>
+          </div>
+          
+          <Card className="rounded-2xl ring-1 ring-primary/10 shadow-xl bg-card/50 backdrop-blur-sm border-0">
+            <CardContent className="p-10 text-center">
               {/* QR Code Image */}
-              <div className="mx-auto mb-6 w-56 h-56 md:w-80 md:h-80 rounded-xl border border-border/50 overflow-hidden">
+              <div className="mx-auto mb-8 w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-white p-4 shadow-lg ring-1 ring-border/20">
                 <img 
                   src="/images/gallery/qrCode.png" 
                   alt="QR Code to visit this site"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-xl"
                 />
               </div>
               
               {/* Text */}
-              <div className="space-y-2 mb-6">
-                <p className="font-semibold text-foreground">Scan to visit this portfolio</p>
-                <p className="text-sm text-muted-foreground">or visit directly:</p>
-                <p className="font-mono text-sm text-primary">iankucharinternship.vercel.app</p>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <p className="text-xl font-semibold text-foreground">Scan to visit this portfolio</p>
+                  <p className="text-muted-foreground">or visit directly at:</p>
+                </div>
+                
+                <div className="bg-muted/50 rounded-lg p-4 max-w-md mx-auto">
+                  <p className="font-mono text-lg text-primary font-medium tracking-wide">
+                    iankucharinternship.vercel.app
+                  </p>
+                </div>
               </div>
               
             </CardContent>
