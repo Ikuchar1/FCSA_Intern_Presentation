@@ -192,8 +192,6 @@ const Connections = () => {
 
         {/* Bottom CTA */}
         <div className="relative mt-20 p-8 rounded-2xl bg-gradient-to-br from-card via-card/80 to-muted/20 border border-border/50 backdrop-blur-sm overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/10 rounded-full blur-xl" />
           
