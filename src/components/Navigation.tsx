@@ -41,9 +41,9 @@ const Navigation = () => {
           {/* Logo/Brand */}
           <Link to="/" className="flex items-center gap-2">
             <div className="h-8 w-8 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">IJ</span>
+              <span className="text-primary-foreground font-bold text-sm">IK</span>
             </div>
-            <span className="font-bold text-lg hidden sm:block">Internship Journey</span>
+            <span className="font-bold text-lg hidden sm:block">Summer at FCSA</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -64,9 +64,9 @@ const Navigation = () => {
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-2">
                   <div className="h-8 w-8 bg-primary rounded-md flex items-center justify-center">
-                    <span className="text-primary-foreground font-bold text-sm">IJ</span>
+                    <span className="text-primary-foreground font-bold text-sm">IK</span>
                   </div>
-                  <span className="font-bold">Internship Journey</span>
+                  <span className="font-bold">Summer at FCSA</span>
                 </div>
                 <Button
                   variant="ghost"
