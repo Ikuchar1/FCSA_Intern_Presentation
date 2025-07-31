@@ -85,7 +85,7 @@ const Reflection = () => {
                   <Code className="h-7 w-7 text-accent" />
                   <div className="absolute inset-0 rounded-xl bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <CardTitle className="text-2xl md:text-3xl bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                <CardTitle className="text-2xl md:text-3xl bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent pb-2">
                   Goal 2: Become a Better Pair Programmer
                 </CardTitle>
               </div>
