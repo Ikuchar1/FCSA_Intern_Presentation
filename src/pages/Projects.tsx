@@ -311,10 +311,7 @@ const Projects = () => {
                   <ul className="space-y-4">
                     {selectedProject.keyPoints.map((point, index) => (
                       <li key={index} className="flex items-start gap-4 group">
-                        <div className="relative">
-                          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary/20 rounded-full"></div>
-                          <CheckCircle2 className="h-4 w-4 text-primary mt-1 relative z-10 bg-background rounded-full" />
-                        </div>
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-1" />
                         <span className="text-muted-foreground leading-relaxed text-base group-hover:text-foreground transition-colors">
                           {point}
                         </span>
