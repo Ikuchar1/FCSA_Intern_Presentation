@@ -104,9 +104,6 @@ const Connections = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="relative p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 backdrop-blur-sm border border-primary/20">
               <Users className="h-10 w-10 text-primary" />
-              <div className="absolute -top-1 -right-1">
-                <Sparkles className="h-4 w-4 text-accent animate-pulse" />
-              </div>
             </div>
             <h1 className="text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
               Connections
