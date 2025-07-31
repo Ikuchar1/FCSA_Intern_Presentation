@@ -190,25 +190,6 @@ const Connections = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="relative mt-20 p-8 rounded-2xl bg-gradient-to-br from-card via-card/80 to-muted/20 border border-border/50 backdrop-blur-sm overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/10 rounded-full blur-xl" />
-          
-          <div className="relative text-center space-y-4">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="h-6 w-6 text-primary animate-pulse" />
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                Building Professional Networks
-              </h3>
-              <Sparkles className="h-6 w-6 text-accent animate-pulse" style={{ animationDelay: '0.5s' }} />
-            </div>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-              These conversations have been invaluable for understanding different roles, gaining industry insights, 
-              and building relationships that will benefit my career growth.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
