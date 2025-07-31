@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Eye, ChevronLeft, ChevronRight, Code, Figma, Github, ExternalLink, Zap, Users, Palette, X } from "lucide-react";
+import { Eye, ChevronLeft, ChevronRight, Code, Figma, Github, ExternalLink, Sparkles, CheckCircle2, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface Project {
@@ -251,19 +251,24 @@ const Projects = () => {
     const nextProject = projects[currentIndex + 1] || projects[0];
 
     return (
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0">
-        {/* Header with navigation */}
-        <div className="sticky top-0 bg-background/95 backdrop-blur-sm border-b p-6 pb-4">
+      <DialogContent className="max-w-5xl max-h-[95vh] overflow-hidden p-0 rounded-2xl bg-gradient-to-br from-background/95 to-muted/60 backdrop-blur-lg border border-border/50 shadow-2xl animate-scale-in">
+        {/* Sticky Header Zone */}
+        <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-md border-b border-border/50 p-6">
           <div className="flex items-center justify-between">
-            <DialogHeader className="flex-1">
-              <DialogTitle className="text-2xl font-bold">{selectedProject.title}</DialogTitle>
-              <p className="text-sm text-muted-foreground mt-1">{selectedProject.subtitle}</p>
-            </DialogHeader>
+            <div className="flex-1">
+              <DialogTitle className="text-2xl font-semibold text-foreground mb-1" aria-labelledby="project-title">
+                {selectedProject.title}
+              </DialogTitle>
+              <p className="text-sm text-muted-foreground font-medium">
+                {selectedProject.subtitle}
+              </p>
+            </div>
             
-            <div className="flex items-center gap-2 ml-4">
+            <div className="flex items-center gap-1 ml-6">
               <Button
                 size="icon"
                 variant="ghost"
+                className="h-9 w-9 hover:bg-accent/50 rounded-full transition-colors"
                 onClick={() => {
                   setSelectedProject(previousProject);
                   setCurrentImageIndex(0);
@@ -275,6 +280,7 @@ const Projects = () => {
               <Button
                 size="icon"
                 variant="ghost"
+                className="h-9 w-9 hover:bg-accent/50 rounded-full transition-colors"
                 onClick={() => {
                   setSelectedProject(nextProject);
                   setCurrentImageIndex(0);
@@ -287,50 +293,100 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="p-6 space-y-8">
-          {/* Key Points */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Zap className="h-5 w-5 text-primary" />
-              Key Highlights
-            </h3>
-            <ul className="space-y-2">
-              {selectedProject.keyPoints.map((point, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span className="text-sm text-muted-foreground leading-relaxed">{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Body Zone */}
+        <div className="overflow-y-auto max-h-[calc(95vh-120px)]">
+          <div className="p-6 space-y-8">
+            {/* Key Highlights Section */}
+            <section 
+              className="animate-fade-in rounded-xl bg-card/50 backdrop-blur-sm border border-border/50 p-6 shadow-lg hover:shadow-xl transition-all duration-300 ring-1 ring-border/20"
+              style={{ animationDelay: '0.1s' }}
+            >
+              <div className="relative">
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-primary/50 rounded-full"></div>
+                <div className="pl-6">
+                  <h3 className="text-2xl font-semibold mb-6 flex items-center gap-3 text-foreground">
+                    <Sparkles className="h-6 w-6 text-primary" />
+                    Key Highlights
+                  </h3>
+                  <ul className="space-y-4">
+                    {selectedProject.keyPoints.map((point, index) => (
+                      <li key={index} className="flex items-start gap-4 group">
+                        <div className="relative">
+                          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary/20 rounded-full"></div>
+                          <CheckCircle2 className="h-4 w-4 text-primary mt-1 relative z-10 bg-background rounded-full" />
+                        </div>
+                        <span className="text-muted-foreground leading-relaxed text-base group-hover:text-foreground transition-colors">
+                          {point}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
 
-          {/* Full Description */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Project Overview</h3>
-            <div className="prose prose-gray dark:prose-invert max-w-none">
-              <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                {selectedProject.fullDescription}
-              </p>
-            </div>
-          </div>
+            {/* Project Overview Section */}
+            <section 
+              className="space-y-6"
+              style={{ animationDelay: '0.2s' }}
+            >
+              <div className="relative">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+                <div className="pt-8">
+                  <h3 className="text-2xl font-semibold mb-6 text-foreground">Project Overview</h3>
+                  <div className="prose prose-gray dark:prose-invert max-w-none">
+                    <p className="text-muted-foreground leading-loose text-lg whitespace-pre-line">
+                      {selectedProject.fullDescription}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-          {/* Tech Stack */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Code className="h-5 w-5 text-primary" />
-              Technologies Used
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {selectedProject.technologies.map((tech) => (
-                <Badge key={tech} variant="secondary" className="px-4 py-2 text-sm font-semibold">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </div>
+            {/* Technologies Used Section */}
+            <section 
+              className="space-y-6"
+              style={{ animationDelay: '0.3s' }}
+            >
+              <h3 className="text-2xl font-semibold flex items-center gap-3 text-foreground">
+                <Code className="h-6 w-6 text-primary" />
+                Technologies Used
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {selectedProject.technologies.map((tech, index) => (
+                  <Badge 
+                    key={tech} 
+                    variant="secondary" 
+                    className="px-4 py-2 text-sm font-medium rounded-full hover:scale-105 transition-transform duration-200 shadow-sm"
+                    style={{ animationDelay: `${0.4 + index * 0.05}s` }}
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </section>
 
-          {/* Project Image */}
-          <ProjectImage images={selectedProject.images} title={selectedProject.title} />
+            {/* Hero Image Section */}
+            <section 
+              className="flex justify-center pt-4"
+              style={{ animationDelay: '0.5s' }}
+            >
+              <div className="relative w-full max-w-3xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl transform rotate-1"></div>
+                <div className="relative bg-muted/30 backdrop-blur-sm rounded-xl p-4 ring-1 ring-border/30 shadow-xl">
+                  {selectedProject.images.length > 0 ? (
+                    <img
+                      src={selectedProject.images[0]}
+                      alt={`${selectedProject.title} preview`}
+                      className="w-full h-80 object-contain rounded-lg shadow-lg"
+                    />
+                  ) : (
+                    <CoverPlaceholder title="Project Preview" className="w-full h-80 rounded-lg" />
+                  )}
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </DialogContent>
     );
